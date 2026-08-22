@@ -1,20 +1,20 @@
 # Gherkin Academy
 
-A Gherkin Academy é uma plataforma de estudo e prática para quem quer aprender Gherkin e começar a criar testes de regressão com Cypress. O conteúdo foi pensado para quem está no início: primeiro apresenta os conceitos, depois mostra exemplos e só então libera a prática avaliativa.
+A Gherkin Academy é uma plataforma de estudo e prática para quem quer aprender Gherkin e começar a escrever testes de regressão com Cypress. O conteúdo foi pensado para quem está no início: primeiro apresenta os conceitos, depois mostra exemplos e então propõe atividades de verificação.
 
 ## O que a plataforma oferece
 
 Na entrada, há dois caminhos. **Aprender Gherkin** apresenta a linguagem em uma sequência que vai dos fundamentos até a automação. **Criar testes com Gherkin** oferece uma área para inserir a história da P.O., escrever uma especificação e exportá-la para um arquivo `.feature`.
 
-A trilha de aprendizagem aborda a estrutura de uma `Feature`, cenários, regras de negócio, contexto comum, exemplos parametrizados, tabelas, doc strings, tags e comentários. A avaliação aparece depois do conteúdo. As respostas são comparadas com critérios explícitos e cada resultado mostra a justificativa da regra utilizada.
+A trilha de aprendizagem aborda a estrutura de uma `Funcionalidade`, cenários, regras de negócio, contexto comum, exemplos parametrizados, tabelas, doc strings, tags e comentários. A atividade de verificação aparece depois do conteúdo. As respostas são comparadas com critérios explícitos e cada resultado mostra a justificativa da regra utilizada, além do link para a fonte correspondente.
 
 O módulo avançado apresenta o caminho do primeiro teste Cypress: pré-requisitos, instalação, abertura do projeto, localização dos arquivos, seletores, assertions, fixtures, interceptação, organização da suíte e execução. Há exemplos copiáveis, links para a documentação oficial e uma simulação visual de uma execução de regressão.
 
 ## Como usar
 
-Comece por **Aprender Gherkin** e siga os módulos na ordem. Leia as lições e marque o conteúdo como concluído para liberar a prova. Depois, abra **Criar testes com Gherkin**, cole ou importe a história da P.O., escreva a `Feature`, escolha português ou inglês, verifique a estrutura e exporte o arquivo.
+Comece por **Aprender Gherkin** e siga os módulos na ordem. Leia as lições e marque o conteúdo como estudado para liberar a atividade de verificação. Depois, abra **Criar testes com Gherkin**, cole ou importe a história da P.O., escreva a `Funcionalidade`, escolha português ou inglês, verifique a estrutura e exporte o arquivo.
 
-No módulo Cypress, comece pela aula de seletores. Em seguida, entenda como o `Then` se transforma em uma assertion, como dados de teste ficam em fixtures e como uma requisição pode ser observada ou controlada com `cy.intercept()`. O botão de copiar coloca cada exemplo no clipboard para você testar no seu próprio projeto.
+No módulo Cypress, comece pelos pré-requisitos e pelo primeiro teste. Em seguida, entenda seletores, ações e asserções, como o `Então` se transforma em uma verificação no código, como dados de teste ficam em fixtures e como uma requisição pode ser observada ou controlada com `cy.intercept()`. O botão de copiar coloca cada exemplo no clipboard para você testar no seu próprio projeto.
 
 ## Execução local
 
@@ -40,6 +40,8 @@ O projeto é um frontend React com Vite, TypeScript, Tailwind CSS e componentes 
 | --- | --- |
 | `client/src/pages/Home.tsx` | Entrada, trilha de Gherkin e bancada de criação |
 | `client/src/components/CypressLearningPanel.tsx` | Aulas, exemplos, workflow e simulação de regressão |
+| `client/src/components/LessonDetailPanel.tsx` | Objetivo, explicação, exemplo, prática e fonte de cada lição |
+| `client/src/content/lessonContent.ts` | Conteúdo detalhado da trilha, em português, com referências oficiais |
 | `client/src/components/ui/` | Componentes de interface reutilizáveis |
 | `client/src/index.css` | Tokens visuais e estilos globais |
 | `content-sources.md` | Fontes oficiais e critérios usados no conteúdo |

@@ -33,3 +33,14 @@ A documentação oficial de localização informa que as palavras-chave do Gherk
 Fontes oficiais: https://docs.cypress.io/app/get-started/open-the-app/ e https://docs.cypress.io/app/core-concepts/writing-and-organizing-tests/
 
 O percurso inicial usa `npx cypress open`, a escolha de E2E Testing no Launchpad, specs em `cypress/e2e` com o padrão `.cy.js`, fixtures em `cypress/fixtures`, suporte em `cypress/support` e configuração em `cypress.config.js`. A execução em terminal usa `npx cypress run`.
+
+## Revisão de fidelidade
+
+- Gherkin Reference: uma Feature por arquivo; Feature é o primeiro elemento primário e recebe `:`; Scenario é sinônimo de Example; passos seguem Given/When/Then/And/But; Given descreve contexto inicial, When descreve evento/ação e Then descreve resultado observável; `Then` deve usar uma asserção; Background ocorre antes dos cenários; comentários usam `#` no início da linha; tabelas usam `|`; Doc Strings usam `"""`; tags usam `@`.
+  Fonte: https://cucumber.io/docs/gherkin/reference/
+- Gherkin Localisation: a diretiva `# language: pt` localiza as palavras-chave; em português, a documentação lista `Funcionalidade`, `Contexto`, `Regra`, `Exemplo`/`Cenário`, `Esquema do Cenário`, `Exemplos`, `Dado`, `Quando`, `Então`, `E` e `Mas`.
+  Fonte: https://cucumber.io/docs/gherkin/languages/
+- Cypress `should`: cria uma asserção, é automaticamente repetido até passar ou atingir o tempo limite; `cy.should()` sem sujeito não é uso correto; não se deve colocar comandos Cypress dentro do callback de `should`.
+  Fonte: https://docs.cypress.io/api/commands/should
+- Cypress `intercept`: espiona ou substitui requisições e respostas; interceptações são limpas antes de cada teste; pode usar método, URL, resposta estática, alias e `cy.wait()`.
+  Fonte: https://docs.cypress.io/api/commands/intercept
