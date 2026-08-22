@@ -207,3 +207,12 @@
 - [x] Executar check e build finais.
 - [x] Sincronizar a versão final no GitHub.
 - [x] Salvar checkpoint final e encerrar o projeto por hoje.
+
+## Tema e exercícios interativos de Gherkin
+
+- [x] Implementar alternância de modo claro e escuro com persistência local.
+- [x] Integrar o controle de tema ao cabeçalho com acessibilidade e feedback visual.
+- [x] Criar seção de exercícios práticos de Gherkin com correção determinística.
+- [x] Integrar a seção à navegação e ao progresso existente.
+- [x] Validar fluxos, responsividade, tipos e build.
+- [x] Sincronizar as alterações no GitHub e salvar checkpoint.

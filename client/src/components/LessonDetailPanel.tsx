@@ -39,39 +39,39 @@ export default function LessonDetailPanel({ lesson, completed, draft, onDraftCha
 
   return (
     <article className="mt-6 overflow-hidden rounded-2xl border border-[#18d8e8]/20 bg-[#0d1115]">
-      <div className="border-b border-white/10 bg-[#121a1d] p-5 sm:p-6">
+      <div className="border-b border-[var(--app-border)] bg-[var(--app-cyan-head)] p-5 sm:p-6">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
             <div className="font-mono text-[10px] uppercase tracking-[.15em] text-[#18d8e8]">LIÇÃO / CONTEÚDO E PRÁTICA</div>
             <h3 className="mt-2 max-w-3xl font-display text-2xl font-semibold tracking-[-.03em]">{lesson.title}</h3>
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-[#b7c7c9]">{lesson.objective}</p>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-[var(--app-cyan-muted)]">{lesson.objective}</p>
           </div>
-          <button type="button" onClick={onToggleCompleted} className={`inline-flex shrink-0 items-center gap-2 rounded-lg border px-3 py-2 font-mono text-[10px] uppercase tracking-[.1em] transition ${completed ? "border-[#18d8e8]/50 bg-[#18d8e8]/10 text-[#18d8e8]" : "border-white/15 bg-white/5 text-[#c6c1cd] hover:border-[#18d8e8]/50 hover:text-white"}`} aria-pressed={completed}>
+          <button type="button" onClick={onToggleCompleted} className={`inline-flex shrink-0 items-center gap-2 rounded-lg border px-3 py-2 font-mono text-[10px] uppercase tracking-[.1em] transition ${completed ? "border-[#18d8e8]/50 bg-[#18d8e8]/10 text-[#18d8e8]" : "border-[var(--app-border-strong)] bg-[var(--app-soft)] text-[var(--app-body-soft)] hover:border-[#18d8e8]/50 hover:text-[var(--app-text)]"}`} aria-pressed={completed}>
             {completed ? "Lição estudada" : "Marcar como estudada"}
           </button>
         </div>
       </div>
       <div className="grid gap-6 p-5 sm:p-6 lg:grid-cols-[1.05fr_.95fr]">
         <div>
-          <p className="text-sm leading-7 text-[#d1ccd8]">{lesson.explanation}</p>
+          <p className="text-sm leading-7 text-[var(--app-body-strong)]">{lesson.explanation}</p>
           <div className="mt-5 rounded-xl border border-[#ff9a72]/20 bg-[#191412] p-4">
-            <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.12em] text-[#ffb095]"><Lightbulb className="h-3.5 w-3.5" /> Vocabulário desta lição</div>
-            <p className="mt-2 text-xs leading-6 text-[#d8c4bc]">{lesson.vocabulary}</p>
+            <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.12em] text-[var(--app-warm-accent)]"><Lightbulb className="h-3.5 w-3.5" /> Vocabulário desta lição</div>
+            <p className="mt-2 text-xs leading-6 text-[var(--app-warm-text)]">{lesson.vocabulary}</p>
           </div>
-          <p className="mt-5 text-sm leading-6 text-[#aaa5b2]"><strong className="text-[#f2edf7]">Prática sugerida:</strong> {lesson.practice}</p>
-          <div className="mt-6 rounded-xl border border-[#f34ba8]/25 bg-[#19121b] p-4">
+          <p className="mt-5 text-sm leading-6 text-[var(--app-muted-strong)]"><strong className="text-[var(--app-heading-soft)]">Prática sugerida:</strong> {lesson.practice}</p>
+          <div className="mt-6 rounded-xl border border-[#f34ba8]/25 bg-[var(--app-pink-panel)] p-4">
             <div className="font-mono text-[10px] uppercase tracking-[.13em] text-[#ff82c0]">ESPAÇO DE PRÁTICA</div>
-            <p className="mt-2 text-xs leading-5 text-[#c9b9c3]">Digite sua tentativa. A validação verifica apenas a estrutura necessária para esta lição.</p>
-            <textarea value={draft} onChange={(event) => onDraftChange(event.target.value)} className="mt-4 min-h-[150px] w-full resize-y rounded-xl border border-white/10 bg-[#090b10] p-4 font-mono text-xs leading-6 text-[#e9e5ee] outline-none placeholder:text-[#5e5968] focus:border-[#18d8e8]" placeholder="Digite aqui sua tentativa..." spellCheck={false} aria-label={`Área de prática da lição ${lesson.title}`} />
-            <div className={`mt-3 flex items-start gap-2 rounded-lg border p-3 text-xs leading-5 ${isReady ? "border-[#18d8e8]/30 bg-[#18d8e8]/10 text-[#bdeff2]" : "border-[#ff9a72]/25 bg-[#ff9a72]/10 text-[#ffd4c4]"}`}>{isReady ? <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" /> : <TriangleAlert className="mt-0.5 h-4 w-4 shrink-0" />}<span>{feedback}</span></div>
+            <p className="mt-2 text-xs leading-5 text-[var(--app-pink-light)]">Digite sua tentativa. A validação verifica apenas a estrutura necessária para esta lição.</p>
+            <textarea value={draft} onChange={(event) => onDraftChange(event.target.value)} className="mt-4 min-h-[150px] w-full resize-y rounded-xl border border-[var(--app-border)] bg-[var(--app-code)] p-4 font-mono text-xs leading-6 text-[var(--app-code-strong)] outline-none placeholder:text-[var(--app-placeholder)] focus:border-[#18d8e8]" placeholder="Digite aqui sua tentativa..." spellCheck={false} aria-label={`Área de prática da lição ${lesson.title}`} />
+            <div className={`mt-3 flex items-start gap-2 rounded-lg border p-3 text-xs leading-5 ${isReady ? "border-[#18d8e8]/30 bg-[#18d8e8]/10 text-[var(--app-success-text)]" : "border-[#ff9a72]/25 bg-[#ff9a72]/10 text-[var(--app-error-light)]"}`}>{isReady ? <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" /> : <TriangleAlert className="mt-0.5 h-4 w-4 shrink-0" />}<span>{feedback}</span></div>
           </div>
         </div>
         <div>
-          <div className="overflow-hidden rounded-xl border border-white/10 bg-[#080a0e]">
-            <div className="border-b border-white/10 px-4 py-2 font-mono text-[10px] uppercase tracking-[.12em] text-[#777380]">{lesson.exampleLabel}</div>
-            <pre className="max-h-[360px] overflow-auto p-4 font-mono text-xs leading-6 text-[#cbd9dd]"><code>{lesson.example}</code></pre>
+          <div className="overflow-hidden rounded-xl border border-[var(--app-border)] bg-[var(--app-code-alt)]">
+            <div className="border-b border-[var(--app-border)] px-4 py-2 font-mono text-[10px] uppercase tracking-[.12em] text-[var(--app-dim)]">{lesson.exampleLabel}</div>
+            <pre className="max-h-[360px] overflow-auto p-4 font-mono text-xs leading-6 text-[var(--app-code-cyan)]"><code>{lesson.example}</code></pre>
           </div>
-          <a href={lesson.source} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.11em] text-[#18d8e8] hover:text-white"><ExternalLink className="h-3.5 w-3.5" /> {lesson.sourceLabel}</a>
+          <a href={lesson.source} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.11em] text-[#18d8e8] hover:text-[var(--app-text)]"><ExternalLink className="h-3.5 w-3.5" /> {lesson.sourceLabel}</a>
         </div>
       </div>
     </article>
