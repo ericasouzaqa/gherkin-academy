@@ -119,5 +119,31 @@
 - [x] Organizar a trilha em passos progressivos e conectados.
 - [x] Completar o README com objetivo, funcionamento, conteúdo, execução local e referências.
 - [x] Validar check, build, navegação e responsividade.
-- [ ] Preparar o projeto para um repositório GitHub.
-- [ ] Confirmar o envio externo antes de criar e publicar o repositório.
+- [x] Preparar o projeto para um repositório GitHub.
+- [x] Confirmar o envio externo antes de criar e publicar o repositório.
+
+## Novas entregas para iniciantes
+
+- [x] Criar módulo introdutório de terminal e Node.js.
+- [x] Incluir aulas de navegação, versão, npm e execução de scripts.
+- [x] Criar projetos Cypress de exemplo já configurados.
+- [x] Disponibilizar downloads dos projetos para prática local.
+- [x] Implementar progresso por aula e por módulo.
+- [x] Persistir o progresso no navegador e permitir continuar de onde parou.
+- [x] Criar uma habilidade reutilizável seguindo o processo de criação de skills.
+- [x] Validar a habilidade com o validador oficial.
+- [x] Validar plataforma, downloads, progresso, check e build.
+- [x] Salvar checkpoint da plataforma atualizada.
+
+## Conclusão por aula e sincronização
+
+- [ ] Marcar cada aula individualmente como concluída.
+- [ ] Atualizar automaticamente o progresso do módulo e da trilha.
+- [ ] Persistir as conclusões individuais no navegador.
+- [ ] Criar exercícios interativos de Node.js e terminal.
+- [ ] Corrigir os exercícios por critérios explícitos.
+- [ ] Atualizar a habilidade com o fluxo de progresso e exercícios.
+- [ ] Validar a habilidade novamente.
+- [ ] Validar check, build e responsividade.
+- [ ] Sincronizar a versão atualizada com o GitHub.
+- [ ] Salvar checkpoint da plataforma.
