@@ -22,6 +22,10 @@ Acesse a plataforma em [ericasouzaqa.github.io/gherkin-academy](https://ericasou
 
 A plataforma não executa testes Cypress reais e não usa IA para corrigir atividades. Ela oferece conteúdo, exemplos, exercícios e validações estruturais locais. A execução real dos testes acontece no projeto Cypress da pessoa, no terminal ou em uma integração contínua configurada por ela.
 
+## Download do executável
+
+O executável portátil para Linux e macOS fica na [Release mais recente do GitHub](https://github.com/ericasouzaqa/gherkin-academy/releases/latest). Baixe o arquivo `gherkin-academy-linux-macos`, tenha o Python 3 instalado, conceda permissão de execução com `chmod +x gherkin-academy-linux-macos` e execute `./gherkin-academy-linux-macos`. A janela do terminal precisa permanecer aberta enquanto a plataforma estiver em uso.
+
 ## Execução local
 
 Requer Node.js e pnpm. Na raiz do projeto:
