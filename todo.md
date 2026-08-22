@@ -137,13 +137,26 @@
 
 ## Conclusão por aula e sincronização
 
-- [ ] Marcar cada aula individualmente como concluída.
-- [ ] Atualizar automaticamente o progresso do módulo e da trilha.
-- [ ] Persistir as conclusões individuais no navegador.
-- [ ] Criar exercícios interativos de Node.js e terminal.
-- [ ] Corrigir os exercícios por critérios explícitos.
-- [ ] Atualizar a habilidade com o fluxo de progresso e exercícios.
-- [ ] Validar a habilidade novamente.
-- [ ] Validar check, build e responsividade.
-- [ ] Sincronizar a versão atualizada com o GitHub.
-- [ ] Salvar checkpoint da plataforma.
+- [x] Marcar cada aula individualmente como concluída.
+- [x] Atualizar automaticamente o progresso do módulo e da trilha.
+- [x] Persistir as conclusões individuais no navegador.
+- [x] Criar exercícios interativos de Node.js e terminal.
+- [x] Corrigir os exercícios por critérios explícitos.
+- [x] Atualizar a habilidade com o fluxo de progresso e exercícios.
+- [x] Validar a habilidade novamente.
+- [x] Validar check, build e responsividade.
+- [x] Sincronizar a versão atualizada com o GitHub.
+- [x] Salvar checkpoint da plataforma.
+
+## Conclusão, certificado e console de terminal
+
+- [ ] Criar tela de resumo quando a trilha chegar a 100%.
+- [ ] Adicionar celebração visual com confete respeitando redução de movimento.
+- [ ] Gerar certificado baixável em PDF ou formato imprimível.
+- [ ] Adicionar exercícios de scripts no package.json.
+- [ ] Adicionar exercícios de yarn e pnpm.
+- [ ] Transformar o painel em console visual de prática.
+- [ ] Destacar sintaxe, entrada, saída e erro no console.
+- [ ] Criar mensagens de erro amigáveis e orientativas.
+- [ ] Validar downloads, conclusão, animação e responsividade.
+- [ ] Atualizar habilidade e salvar checkpoint.
