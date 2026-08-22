@@ -241,3 +241,12 @@
 - [ ] Criar workflow de build e publicação no GitHub Pages.
 - [ ] Ativar Pages e confirmar a URL pública.
 - [ ] Validar o site publicado e salvar o estado final.
+
+## Executável para download
+
+- [ ] Definir um formato executável compatível com a plataforma publicada.
+- [ ] Preparar o executável pronto para download.
+- [ ] Publicar o executável em uma Release pública do GitHub.
+- [ ] Atualizar o README com o local e as instruções de download.
+- [ ] Validar o artefato e o GitHub Pages.
+- [ ] Salvar checkpoint final.
