@@ -226,3 +226,10 @@
 - [x] Validar visualmente desktop e celular.
 - [x] Executar check e build finais.
 - [x] Publicar a revisão no GitHub e salvar checkpoint.
+
+## README e About do GitHub
+
+- [x] Revisar o texto atual do README e a descrição do repositório.
+- [x] Redigir uma apresentação objetiva e fiel ao propósito de aprendizagem.
+- [x] Publicar o README e atualizar a seção About no GitHub.
+- [x] Confirmar o resultado e encerrar a tarefa.
