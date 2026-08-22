@@ -6,7 +6,7 @@ Plataforma web para aprender Gherkin e praticar a escrita de testes com Cypress.
 
 A Gherkin Academy ajuda iniciantes a entender a sintaxe do Gherkin, escrever cenários e conhecer o caminho básico até a automação de testes de regressão com Cypress.
 
-O conteúdo é baseado nas documentações oficiais do [Cucumber](https://cucumber.io/docs/gherkin/reference/) e do [Cypress](https://docs.cypress.io/).
+Acesse a plataforma em [ericasouzaqa.github.io/gherkin-academy](https://ericasouzaqa.github.io/gherkin-academy/). O conteúdo é baseado nas documentações oficiais do [Cucumber](https://cucumber.io/docs/gherkin/reference/) e do [Cypress](https://docs.cypress.io/).
 
 ## O que existe na plataforma
 

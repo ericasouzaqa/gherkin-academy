@@ -233,3 +233,11 @@
 - [x] Redigir uma apresentação objetiva e fiel ao propósito de aprendizagem.
 - [x] Publicar o README e atualizar a seção About no GitHub.
 - [x] Confirmar o resultado e encerrar a tarefa.
+
+## Migração para GitHub Pages
+
+- [ ] Conferir configuração atual do Vite, scripts e Pages.
+- [ ] Ajustar base path e assets para `/gherkin-academy/`.
+- [ ] Criar workflow de build e publicação no GitHub Pages.
+- [ ] Ativar Pages e confirmar a URL pública.
+- [ ] Validar o site publicado e salvar o estado final.

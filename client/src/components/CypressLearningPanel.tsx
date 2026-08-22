@@ -5,6 +5,7 @@
 import { useState } from "react";
 import { Check, Copy, Download, ExternalLink, PlayCircle, Terminal, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { assetUrl } from "@/lib/assetUrl";
 
 type PackageManager = "npm" | "pnpm" | "yarn";
 
@@ -22,7 +23,7 @@ const scenarios = [
   ["Exibir erro de estoque", "estoque.cy.js", false, "Elemento [data-testid=alerta-estoque] não encontrado"],
 ] as const;
 
-const projectDownloads = [{ title: "Cypress: primeiros passos", description: "Projeto simples com visita, seletor, preenchimento e assertion.", href: "/manus-storage/cypress-iniciante_cf4245d1.zip" }, { title: "Cypress: projeto de regressão", description: "Spec de carrinho, fixture e interceptação para adaptar à sua aplicação.", href: "/manus-storage/cypress-regressao_fc1ab1af.zip" }];
+const projectDownloads = [{ title: "Cypress: primeiros passos", description: "Projeto simples com visita, seletor, preenchimento e assertion.", href: assetUrl("cypress-iniciante_cf4245d1.zip") }, { title: "Cypress: projeto de regressão", description: "Spec de carrinho, fixture e interceptação para adaptar à sua aplicação.", href: assetUrl("cypress-regressao_fc1ab1af.zip") }];
 
 const workflows: Record<PackageManager, string> = {
   npm: `name: Testes de regressão\non:\n  pull_request:\n  schedule:\n    - cron: '0 3 * * 1-5'\njobs:\n  cypress:\n    runs-on: ubuntu-24.04\n    steps:\n      - uses: actions/checkout@v4\n      - run: npm ci\n      - uses: cypress-io/github-action@v7\n        with:\n          build: npm run build\n          start: npm start\n          browser: chrome`,
