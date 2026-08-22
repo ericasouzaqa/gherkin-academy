@@ -15,7 +15,7 @@ type Props = {
 
 function validateDraft(lesson: LessonContent, draft: string) {
   const value = draft.trim();
-  if (!value) return "Comece digitando uma tentativa. Use o exemplo ao lado como ponto de partida.";
+  if (!value) return "Comece digitando uma tentativa. Use o exemplo desta lição como ponto de partida.";
   if (lesson.title.includes("Cypress")) {
     const missing = ["cy."].filter((token) => !value.includes(token));
     return missing.length ? "Ainda não encontrei um comando Cypress. Comece com cy.visit(), cy.get() ou cy.contains()." : "Estrutura reconhecida: há pelo menos um comando Cypress. Compare agora a ação e a asserção com o comportamento descrito.";

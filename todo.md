@@ -216,3 +216,13 @@
 - [x] Integrar a seção à navegação e ao progresso existente.
 - [x] Validar fluxos, responsividade, tipos e build.
 - [x] Sincronizar as alterações no GitHub e salvar checkpoint.
+
+## Auditoria final de coerência e orientação
+
+- [x] Auditar instruções que mencionam posição, sequência ou elementos visuais.
+- [x] Auditar mensagens de orientação, estados e CTAs contra o que realmente existe.
+- [x] Corrigir textos que possam deixar a pessoa iniciante perdida.
+- [x] Revisar coesão entre navegação, conteúdo, prática, bancada e documentação.
+- [x] Validar visualmente desktop e celular.
+- [x] Executar check e build finais.
+- [x] Publicar a revisão no GitHub e salvar checkpoint.

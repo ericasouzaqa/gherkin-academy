@@ -4,7 +4,7 @@ A Gherkin Academy é uma plataforma de estudo e prática para quem quer aprender
 
 ## O que a plataforma oferece
 
-Na entrada, há dois caminhos. **Aprender Gherkin** apresenta a linguagem em uma sequência que vai dos fundamentos até a automação. **Criar testes com Gherkin** oferece uma área para inserir a história da P.O., escrever uma especificação e exportá-la para um arquivo `.feature`.
+Na entrada, há três caminhos principais no cabeçalho. **Aprender** apresenta a linguagem em uma sequência que vai dos fundamentos até a automação. **Praticar** abre exercícios independentes de Gherkin. **Criar testes** oferece uma área para inserir a história da P.O., escrever uma especificação e exportá-la para um arquivo `.feature`. O mesmo cabeçalho também possui o controle de modo claro/escuro, que preserva a preferência no navegador.
 
 A trilha de aprendizagem aborda a estrutura de uma `Funcionalidade`, cenários, regras de negócio, contexto comum, exemplos parametrizados, tabelas, doc strings, tags e comentários. A atividade de verificação aparece depois do conteúdo. As respostas são comparadas com critérios explícitos e cada resultado mostra a justificativa da regra utilizada, além do link para a fonte correspondente.
 
@@ -12,7 +12,7 @@ O módulo avançado apresenta o caminho do primeiro teste Cypress: pré-requisit
 
 ## Como usar
 
-Comece por **Aprender Gherkin** e siga os módulos na ordem. Leia as lições e marque o conteúdo como estudado para liberar a atividade de verificação. Depois, abra **Criar testes com Gherkin**, cole ou importe a história da P.O., escreva a `Funcionalidade`, escolha português ou inglês, verifique a estrutura e exporte o arquivo.
+Comece por **Aprender** e siga os módulos na ordem. Abra uma lição, leia o conteúdo, use a área de prática da própria lição e marque o estudo como concluído para acompanhar o progresso. Para uma rodada independente, use **Praticar**: responda às questões e escreva um cenário mínimo; a correção é estrutural e determinística. Em **Criar testes**, cole ou importe a história da P.O., escreva a `Funcionalidade`, escolha português ou inglês, verifique a estrutura e exporte o arquivo.
 
 No módulo Cypress, comece pelos pré-requisitos e pelo primeiro teste. Em seguida, entenda seletores, ações e asserções, como o `Então` se transforma em uma verificação no código, como dados de teste ficam em fixtures e como uma requisição pode ser observada ou controlada com `cy.intercept()`. O botão de copiar coloca cada exemplo no clipboard para você testar no seu próprio projeto.
 
@@ -32,7 +32,7 @@ pnpm check
 pnpm build
 ```
 
-O projeto é um frontend React com Vite, TypeScript, Tailwind CSS e componentes shadcn/ui. O progresso, a história da P.O. e a feature são mantidos no armazenamento local do navegador nesta versão.
+O projeto é um frontend React com Vite, TypeScript, Tailwind CSS e componentes shadcn/ui. O progresso, as respostas da prática, os rascunhos das lições, a história da P.O., a feature e a preferência de tema são mantidos no armazenamento local do navegador nesta versão.
 
 ## Estrutura principal
 
@@ -41,6 +41,7 @@ O projeto é um frontend React com Vite, TypeScript, Tailwind CSS e componentes 
 | `client/src/pages/Home.tsx` | Entrada, trilha de Gherkin e bancada de criação |
 | `client/src/components/CypressLearningPanel.tsx` | Aulas, exemplos, workflow e simulação de regressão |
 | `client/src/components/LessonDetailPanel.tsx` | Objetivo, explicação, exemplo, prática e fonte de cada lição |
+| `client/src/components/GherkinPracticePanel.tsx` | Exercícios independentes de Gherkin, escrita livre e correção determinística |
 | `client/src/content/lessonContent.ts` | Conteúdo detalhado da trilha, em português, com referências oficiais |
 | `client/src/components/ui/` | Componentes de interface reutilizáveis |
 | `client/src/index.css` | Tokens visuais e estilos globais |
