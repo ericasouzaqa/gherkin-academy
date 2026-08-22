@@ -150,13 +150,60 @@
 
 ## Conclusão, certificado e console de terminal
 
-- [ ] Criar tela de resumo quando a trilha chegar a 100%.
-- [ ] Adicionar celebração visual com confete respeitando redução de movimento.
-- [ ] Gerar certificado baixável em PDF ou formato imprimível.
-- [ ] Adicionar exercícios de scripts no package.json.
-- [ ] Adicionar exercícios de yarn e pnpm.
-- [ ] Transformar o painel em console visual de prática.
-- [ ] Destacar sintaxe, entrada, saída e erro no console.
-- [ ] Criar mensagens de erro amigáveis e orientativas.
-- [ ] Validar downloads, conclusão, animação e responsividade.
-- [ ] Atualizar habilidade e salvar checkpoint.
+- [x] Criar tela de resumo quando a trilha chegar a 100%.
+- [x] Removido: celebração formal não faz parte da plataforma de aprendizagem.
+- [x] Removido: certificado não faz parte da plataforma de aprendizagem.
+- [x] Adicionar exercícios de scripts no package.json.
+- [x] Adicionar exercícios de yarn e pnpm.
+- [x] Transformar o painel em console visual de prática.
+- [x] Destacar sintaxe, entrada, saída e erro no console.
+- [x] Criar mensagens de erro amigáveis e orientativas.
+- [x] Validar downloads, conclusão, animação e responsividade.
+- [x] Atualizar habilidade e salvar checkpoint.
+
+## Revisão de fidelidade educacional
+
+- [x] Remover certificado, celebração de conclusão e qualquer promessa de credencial.
+- [x] Trocar linguagem de certificação por linguagem de progresso e estudo.
+- [x] Auditar módulos básico, intermediário e avançado contra fontes oficiais.
+- [x] Revisar glossário e definições em português do Brasil.
+- [x] Revisar asserções e exemplos de Cypress sem simplificações incorretas.
+- [x] Reescrever o caminho de criação de testes Cypress passo a passo.
+- [x] Manter verificações como prática de aprendizagem, sem status de certificação.
+- [x] Validar referências oficiais, check, build e responsividade.
+- [x] Atualizar habilidade e salvar checkpoint revisado.
+
+## Conteúdo detalhado e novos exercícios
+
+- [x] Criar registros detalhados para cada lição dos módulos Gherkin.
+- [x] Criar registros detalhados para terminal e Node.js.
+- [x] Criar registros detalhados para cada lição de Cypress.
+- [x] Associar exemplos práticos de Cypress às lições correspondentes.
+- [x] Adicionar exercícios interativos de Gherkin com justificativas oficiais.
+- [x] Adicionar exercícios interativos de Cypress com justificativas oficiais.
+- [x] Melhorar a leitura da justificativa após cada resposta.
+- [x] Validar conteúdo, fontes, check e build.
+- [x] Sincronizar todas as alterações com o GitHub.
+- [x] Salvar checkpoint final.
+
+## Prática editável e escrita livre
+
+- [x] Adicionar editor de prática em cada lição.
+- [x] Persistir o rascunho de cada lição localmente.
+- [x] Mostrar documentação oficial junto de cada justificativa.
+- [x] Criar exercícios de escrita livre em Gherkin e Cypress.
+- [x] Validar estrutura imediatamente após a digitação.
+- [x] Mostrar erros, itens ausentes e próximos ajustes.
+- [x] Validar check, build e responsividade.
+- [x] Sincronizar a nova versão com o GitHub.
+- [x] Salvar checkpoint final.
+
+## Revisão final e encerramento
+
+- [x] Revisar linguagem visível e remover inconsistências restantes.
+- [x] Revisar navegação, estados vazios, erros e feedbacks.
+- [x] Revisar referências oficiais e conteúdo educacional.
+- [x] Validar acessibilidade básica e responsividade.
+- [x] Executar check e build finais.
+- [x] Sincronizar a versão final no GitHub.
+- [x] Salvar checkpoint final e encerrar o projeto por hoje.
