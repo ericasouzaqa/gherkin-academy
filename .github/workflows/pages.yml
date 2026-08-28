@@ -37,7 +37,6 @@ jobs:
         run: pnpm build:pages
         env:
           GITHUB_PAGES: true
-          VITE_ASSET_ORIGIN: https://gherkinacad-bbqczqcq.manus.space
 
       - name: Preparar Pages
         uses: actions/configure-pages@v5

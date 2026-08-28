@@ -70,7 +70,7 @@ function CodeBlock({ label, code }: { label: string; code: string }) {
   const copy = async () => { await navigator.clipboard.writeText(code); setCopied(true); window.setTimeout(() => setCopied(false), 1800); };
   return <div className="overflow-hidden rounded-xl border border-[var(--app-border)] bg-[var(--app-code)]"><div className="flex items-center justify-between border-b border-[var(--app-border)] px-4 py-2"><span className="font-mono text-[10px] uppercase tracking-[.12em] text-[var(--app-dim)]">{label}</span><button onClick={copy} className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[.1em] text-[#18d8e8] hover:text-[var(--app-text)]" aria-label={`Copiar ${label}`}>{copied ? <><CheckCheck className="h-3.5 w-3.5" /> Copiado!</> : <><Copy className="h-3.5 w-3.5" /> Copiar</>}</button></div><pre className="overflow-x-auto p-4 font-mono text-xs leading-6 text-[var(--app-code-text)]"><code>{code}</code></pre></div>;
 }
-GlobalWorkerOptions.workerSrc = "https://unpkg.com/pdfjs-dist@6.2.108/build/pdf.worker.min.mjs";
+GlobalWorkerOptions.workerSrc = `${import.meta.env.BASE_URL}pdf.worker.min.mjs`;
 
 export default function Home() {
   const { theme, toggleTheme } = useTheme();

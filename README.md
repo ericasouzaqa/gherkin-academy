@@ -1,51 +1,83 @@
 # Gherkin Academy
 
-Plataforma web para aprender Gherkin e praticar a escrita de testes com Cypress.
+Plataforma offline para aprender Gherkin, praticar a escrita de cenários e estudar o caminho introdutório até testes E2E com Cypress.
 
 ## Objetivo
 
-A Gherkin Academy ajuda iniciantes a entender a sintaxe do Gherkin, escrever cenários e conhecer o caminho básico até a automação de testes de regressão com Cypress.
+A Gherkin Academy ajuda pessoas iniciantes a entender a sintaxe do Gherkin, transformar histórias de usuário em especificações `.feature` e reconhecer como um cenário pode ser conectado a um teste Cypress.
 
-A publicação está configurada para [ericasouzaqa.github.io/gherkin-academy](https://ericasouzaqa.github.io/gherkin-academy/). Antes de considerar a plataforma disponível para usuários, confirme que o GitHub Pages está configurado para publicar pelo workflow e que a URL serve o build da aplicação, não apenas o README. O conteúdo é baseado nas documentações oficiais do [Cucumber](https://cucumber.io/docs/gherkin/reference/) e do [Cypress](https://docs.cypress.io/).
+A aplicação é **estática, local e independente**. Ela não usa inteligência artificial, não chama APIs do Manus, não exige autenticação, não envia o progresso para um servidor e não executa testes Cypress reais dentro da plataforma. A validação dos exercícios é determinística e ocorre no navegador.
 
-## O que existe na plataforma
+## O que está incluído
 
-- Trilha de aprendizagem de Gherkin, do básico ao avançado.
-- Exercícios de Gherkin com correção determinística.
-- Área para inserir uma história da P.O. e escrever uma especificação `.feature`.
-- Suporte às palavras-chave de Gherkin em português e inglês.
-- Aulas introdutórias de terminal, Node.js e Cypress.
-- Exemplos de seletores, asserções, fixtures, interceptação e execução de regressão.
-- Persistência local de progresso, rascunhos, respostas e preferência de tema.
+A plataforma contém uma trilha progressiva com cinco módulos, lições de Gherkin, perguntas de verificação, prática de escrita livre, bancada para história da pessoa responsável pelo produto, suporte às palavras-chave em português e inglês, importação de texto de PDF, exportação de `.feature`, glossário de Cypress, exemplos de CI e dois projetos Cypress para download.
 
-## Limites
+O progresso, os rascunhos, a história, a especificação e o tema são armazenados apenas no `localStorage` do navegador. Se o armazenamento estiver corrompido, a aplicação descarta o valor inválido e utiliza o estado inicial.
 
-A plataforma não executa testes Cypress reais e não usa IA para corrigir atividades. Ela oferece conteúdo, exemplos, exercícios e validações estruturais locais. A execução real dos testes acontece no projeto Cypress da pessoa, no terminal ou em uma integração contínua configurada por ela.
+## Funcionamento offline
 
-## Download do executável
+Depois que a aplicação ou o executável é baixado, o fluxo principal funciona sem internet. O JavaScript, CSS, worker do PDF.js e os projetos Cypress são empacotados localmente. Os links para a documentação oficial, LinkedIn e YouTube são referências opcionais e naturalmente exigem conexão para abrir.
 
-O executável portátil para Linux e macOS fica na [Release mais recente do GitHub](https://github.com/ericasouzaqa/gherkin-academy/releases/latest). Baixe o arquivo `gherkin-academy-linux-macos`, tenha o Python 3 instalado, conceda permissão de execução com `chmod +x gherkin-academy-linux-macos` e execute `./gherkin-academy-linux-macos`. A janela do terminal precisa permanecer aberta enquanto a plataforma estiver em uso.
+A aplicação não contém chamadas de rede no runtime principal. O PDF é processado localmente no navegador; PDFs escaneados, que não possuem camada de texto, não são submetidos a OCR.
 
-## Execução local
+## Executável para computador
 
-Requer Node.js e pnpm. Na raiz do projeto:
+A [Release mais recente](https://github.com/ericasouzaqa/gherkin-academy/releases/latest) disponibiliza o arquivo `gherkin-academy-linux-macos`. Ele requer Python 3 instalado no computador, abre um servidor HTTP local e não baixa dependências durante a execução.
+
+No Linux ou macOS, baixe o arquivo, conceda permissão e execute:
+
+```bash
+chmod +x gherkin-academy-linux-macos
+./gherkin-academy-linux-macos
+```
+
+A janela do terminal precisa permanecer aberta enquanto a plataforma estiver em uso. O endereço padrão é `http://127.0.0.1:4173/gherkin-academy/`. Para usar outra porta, defina `GHERKIN_PORT` antes de executar.
+
+O executável é um launcher portátil para Linux e macOS, não um binário nativo. Windows não faz parte do artefato atual.
+
+## GitHub Pages
+
+O workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) gera o site com a base `/gherkin-academy/` e publica o conteúdo de `dist/public`. No GitHub, a configuração de Pages deve estar em **Settings → Pages → Build and deployment → Source: GitHub Actions**. A URL esperada é:
+
+<https://ericasouzaqa.github.io/gherkin-academy/>
+
+A publicação só deve ser anunciada depois de abrir essa URL e confirmar que ela mostra a interface da aplicação, e não o README do repositório. O workflow verde, sozinho, não é evidência suficiente.
+
+## Desenvolvimento local
+
+Requer Node.js 22 ou compatível e pnpm. Na raiz do projeto:
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Para validar o projeto:
+Para validar tipagem e builds:
 
 ```bash
 pnpm check
 pnpm build
+pnpm build:pages
 ```
 
-## Fontes principais
+Para gerar o launcher portátil após o build:
 
-- [Gherkin Reference](https://cucumber.io/docs/gherkin/reference/)
-- [Gherkin Languages](https://cucumber.io/docs/gherkin/languages/)
-- [Cypress Installation](https://docs.cypress.io/app/get-started/install-cypress)
-- [Cypress Documentation](https://docs.cypress.io/)
-- [Cypress GitHub Actions](https://docs.cypress.io/app/continuous-integration/github-actions)
+```bash
+python3 scripts/make_portable_launcher.py
+```
+
+O arquivo é criado em `dist/gherkin-academy-linux-macos`.
+
+## Downloads de prática
+
+Os dois projetos Cypress são arquivos versionados em `client/public/downloads/` e entram no build sem depender de armazenamento externo. Eles contêm README, `package.json`, specs e, no projeto de regressão, uma fixture local.
+
+A plataforma ensina instalação e execução do Cypress, mas os projetos baixados dependem da instalação do Cypress no computador da pessoa. A aplicação de aprendizagem em si continua funcionando offline sem instalar Cypress.
+
+## Fontes educacionais
+
+O conteúdo foi conferido contra a [referência oficial do Gherkin](https://cucumber.io/docs/gherkin/reference/), a [localização de palavras-chave do Gherkin](https://cucumber.io/docs/gherkin/languages/) e a [documentação oficial do Cypress](https://docs.cypress.io/).
+
+## Licença
+
+Este projeto é distribuído sob a licença MIT.

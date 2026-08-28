@@ -68,6 +68,18 @@ const choiceExercises: ChoiceExercise[] = [
   },
 ];
 
+function dailyOrder<T extends { id: string }>(items: T[]) {
+  const day = Math.floor(Date.now() / 86_400_000);
+  return [...items].sort((left, right) => {
+    const score = (id: string) => {
+      let hash = day;
+      for (const character of id) hash = (hash * 31 + character.charCodeAt(0)) | 0;
+      return hash;
+    };
+    return score(left.id) - score(right.id);
+  });
+}
+
 function normalize(value: string) {
   return value.trim().replace(/\r/g, "").replace(/[ \t]+/g, " ");
 }
@@ -103,6 +115,8 @@ export default function GherkinPracticePanel({ onBack }: { onBack: () => void })
   const [scenario, setScenario] = useState("");
   const [scenarioResult, setScenarioResult] = useState<Result>(null);
   const [scenarioMessage, setScenarioMessage] = useState("");
+  const orderedExercises = useMemo(() => dailyOrder(choiceExercises), []);
+
 
   useEffect(() => {
     const saved = localStorage.getItem("gherkin-practice-state");
@@ -164,7 +178,7 @@ export default function GherkinPracticePanel({ onBack }: { onBack: () => void })
       </div>
 
       <div className="mt-10 space-y-5">
-        {choiceExercises.map((exercise) => {
+        {orderedExercises.map((exercise) => {
           const result = choiceResults[exercise.id] ?? null;
           return (
             <article key={exercise.id} className="rounded-2xl border border-[var(--app-border)] bg-[var(--app-panel)] p-5 sm:p-6">
