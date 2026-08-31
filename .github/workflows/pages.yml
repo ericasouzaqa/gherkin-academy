@@ -34,8 +34,10 @@ jobs:
         env:
           GITHUB_PAGES: true
       - name: Preparar Pages
-        # https://github.com/actions/configure-pages
+        # https://docs.github.com/actions
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Empacotar site
         # https://github.com/actions/upload-pages-artifact
         uses: actions/upload-pages-artifact@v3
