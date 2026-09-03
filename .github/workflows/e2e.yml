@@ -1,0 +1,48 @@
+name: Testes E2E
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Preparar pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Instalar dependências
+        run: pnpm install --frozen-lockfile
+
+      - name: Gerar site estático para os testes
+        run: pnpm build
+
+      - name: Instalar o binário do Cypress
+        run: pnpm exec cypress install
+
+      - name: Iniciar preview estático
+        run: |
+          pnpm preview --host 127.0.0.1 --port 4173 > /tmp/gherkin-preview.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl --silent --fail http://127.0.0.1:4173/ > /dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          curl --silent --fail http://127.0.0.1:4173/ > /dev/null
+
+      - name: Executar testes E2E
+        run: pnpm test:e2e
+
